@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <title>Cadastro de Produtos</title>
+</head>
+<body style="background-color: #ffffff; padding: 20px;">
+ <h2 align="center">Formulário de Cadastro de Produtos</h2>
+ <center>
+ <form action="salvar_produto.php" method="post" style="width: 80%; border:
+1px solid #ccc; padding: 15px;">
+
+ <p align="left">
+ <label for="nome_prod">Nome do Produto:</label><br>
+ <input type="text" id="nome_prod" name="nome_produto" size="50"
+maxlength="100" required>
+ </p>
+ <p align="left">
+ <label for="preco_prod">Preço (R$):</label><br>
+ <input type="number" id="preco_prod" name="preco_produto"
+step="0.01" min="0" size="10" required>
+ </p>
+
+ <p align="left">
+ <label for="categoria_prod">Categoria:</label><br>
+ <select id="categoria_prod" name="categoria_produto">
+ <option value="">Selecione...</option>
+ <option value="eletronico">Eletrônicos</option>
+ <option value="vestuario">Vestuário</option>
+ <option value="livro">Livros</option>
+ <option value="alimento">Alimentos</option>
+ </select>
+ </p>
+ <p align="left" style="border: 1px dashed #999; padding: 10px;">
+ <label>Características do Produto:</label><br>
+
+ <input type="checkbox" id="disponivel" name="caract_disponivel"
+value="sim" checked>
+ <label for="disponivel">Em Estoque</label><br>
+
+ <input type="checkbox" id="promocao" name="caract_promocao"
+value="sim">
+ <label for="promocao">Em Promoção</label>
+ </p>
+ <p align="left">
+ <label for="desc_prod">Descrição Detalhada:</label><br>
+ <textarea id="desc_prod" name="descricao_produto" rows="5"
+cols="50"></textarea>
+ </p>
+
+ <p align="center">
+ <input type="submit" value="Enviar Cadastro"
+style="background-color: #007bff; color: white; padding: 8px 15px; border:
+none;">
+ <input type="reset" value="Limpar" style="background-color: #dc3545;
+color: white; padding: 8px 15px; border: none;">
+ </p>
+ </form>
+ </center>
+</body>
+</html>
