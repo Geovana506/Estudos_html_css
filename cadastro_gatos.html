@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <title>Cadastro de Produtos</title>
+</head>
+<body style="background-color: #ffffff; padding: 20px;">
+ <h2 align="left">Cadastre seu Gato</h2>
+ <left>
+ <form action="salvar_produto.php" method="post" style="width: 80%; border:
+1px solid #ccc; padding: 15px;">
+
+ <p align="left">
+ <label for="nome_prod">Nome do Gato:</label><br>
+ <input type="text" id="nome_gat" name="nome_gato" size="50"
+maxlength="100" required>
+ </p>
+ <p align="left">
+ <label for="preco_prod">Qual a idade:</label><br>
+ <input type="number" id="idade_gat" name="idade_gato"
+step="1" min="0" size="20" required>
+ </p>
+
+ <p align="left">
+ <label for="pelagem_gat">Pelagem:</label><br>
+ <select id="pelagem_gat" name="pelagem_gato">
+ <option value="">Selecione...</option>
+ <option value="tricolor">Tricolor</option>
+ <option value="rajado">Rajado</option>
+ <option value="frajola">Frajola</option>
+ <option value="branco">Branco</option>
+ <option value="preto">Preto</option>
+ <option value="cinza">Cinza</option>
+ <option value="laranja">Laranja</option>
+ </select>
+ </p>
+ <p align="left" style="border: 1px dashed #999; padding: 10px;">
+ <label>Seu gato foi:</label><br>
+
+ <input type="checkbox" id="adotado" name="caract_adotado"
+value="sim" checked>
+ <label for="adotado">Adotado</label><br>
+
+ <input type="checkbox" id="comprado" name="caract_comprado"
+value="sim">
+ <label for="comprado">Comprado</label>
+ </p>
+ <p align="left">
+ <label for="desc_prod">Descrição Detalhada:</label><br>
+ <textarea id="desc_gat" name="descricao_gato" rows="5"
+cols="50"></textarea>
+ </p>
+
+ <p align="center">
+ <input type="submit" value="Enviar Cadastro"
+style="background-color: #007bff; color: white; padding: 8px 15px; border:
+none;">
+ <input type="reset" value="Limpar" style="background-color: #dc3545;
+color: white; padding: 8px 15px; border: none;">
+ </p>
+ </form>
+ </center>
+</body>
+</html>
