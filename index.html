@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <title>Elementos HTML na Prática</title>
 </head>
+<body>
+    <table widh="100%" cellpadding="10%" cellspacing="0" border ="1" bgcolor ="#c0c0c0">
+        <tr>
 
-    <body bgcolor="#f0f0f0">
-    <table width="100%" cellpadding="10" cellspacing="0" border="1" bgcolor="#ffffff">
-        <tr bgcolor="#c0c0c0">
             <th colspan="2" align="center">
-                <h1 align="center">Apresentação de gatos</h1>
+                <iframe name="conteudoTopo" src="topo.html" frameborder="0" width="100%" height="90px">
+                </iframe>
             </th>
+
         </tr>
         <tr>
-            <td width="20%" valign="top" bgcolor="#e0e0e0">
-                <h3 align="center">Menu</h3>
-                <ul>
-                    <li><a href="romeu.html" target="conteudoGato">Romeu</a></li>
-                    <li><a href="nina.html" target="conteudoGato">Nina</a></li>
-                    <li><a href="raul.html" target="conteudoGato">Raul</a></li>
-                    <li><a href="cadastro_donos.html" target="conteudoGato">Cadastro de Donos</a></li>
-                    <li><a href="cadastro_gatos.html" target="conteudoGato">Cadastro de Gatos</a></li>
-                </ul>
+
+
+            <td width="20%" valign="top">
+                <iframe name="conteudoMenu" src="menu.html" frameborder="0" width="100%" height="400px">
+                </iframe>
             </td>
+            
             <td width="80%" valign="top">
                 <iframe name="conteudoGato" src="romeu.html" frameborder="0" width="100%" height="500px">
                 </iframe>
             </td>
+        </tr>
+        <tr>
+
+            <th colspan="2" align="center">
+                <iframe name="conteudoRodape" src="rodape.html" frameborder="0" width="100%" height="80px">
+                </iframe>
+            </th>
+
         </tr>
     </table>
 
