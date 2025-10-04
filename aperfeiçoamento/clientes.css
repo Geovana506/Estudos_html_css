@@ -1,0 +1,56 @@
+CLIENTES.HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <title>Cadastro de Clientes</title>
+ <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+ <h2>Formulário de Cadastro de Clientes</h2>
+ <div class="form-container">
+ <form action="salvar_cliente.php" method="post">
+
+ <label for="nome_cli">Nome Completo:</label>
+ <input type="text" id="nome_cli" name="nome_cliente"
+required>
+ <label for="email_cli">E-mail:</label>
+ <input type="email" id="email_cli"
+name="email_cliente" required>
+
+ <label for="senha_cli">Senha:</label>
+ <input type="password" id="senha_cli"
+name="senha_cliente" required>
+ <div style="padding: 10px 0; border: 1px dashed #999;
+margin-bottom: 15px; padding: 10px; border-radius: 4px;">
+ <label>Gênero:</label><br>
+ <input type="radio" id="genero_m" name="genero"
+value="masculino">
+ <label for="genero_m">Masculino</label>
+ <input type="radio" id="genero_f" name="genero"
+value="feminino">
+ <label for="genero_f">Feminino</label>
+ <input type="radio" id="genero_o" name="genero"
+value="outro">
+ <label for="genero_o">Outro</label>
+ </div>
+ <p style="margin-top: 15px;">
+ <input type="checkbox" id="aceite"
+name="aceite_termos" value="sim" required>
+ <label for="aceite">Eu aceito os Termos de
+Serviço.</label>
+ </p>
+ <label for="obs_cli">Observações:</label>
+ <textarea id="obs_cli" name="obs_cliente"
+rows="3"></textarea>
+
+ <div class="botoes-acao" style="text-align: center;">
+ <button type="submit" class="btn-submit">Cadastrar
+Cliente</button>
+ <button type="reset" class="btn-reset">Limpar
+Campos</button>
+ </div>
+ </form>
+ </div>
+</body>
+</html>

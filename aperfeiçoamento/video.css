@@ -1,0 +1,18 @@
+VIDEO.HTML
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <title>Vídeo</title>
+ <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+ <h2>Assista ao Nosso Vídeo</h2>
+ <div style="text-align: center;">
+ <iframe width="560" height="315"
+src="https://www.youtube.com/embed/S2oWwG0qLgA" title="YouTube
+video player" frameborder="0" allow="accelerometer; autoplay;
+clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+ </div>
+</body>
+</html>
