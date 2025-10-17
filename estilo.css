@@ -23,7 +23,7 @@ p {
     text-align: left;
 }
 
-/* Estilo para as imagens dos gatos: MENORES AINDA E PADRONIZADAS */
+/* Estilo para as imagens dos gatos*/
 img {
     max-width: 300px; /* Diminuído de 400px para 300px */
     width: 100%;
