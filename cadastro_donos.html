@@ -3,28 +3,29 @@
 <head>
  <meta charset="UTF-8">
  <title>Cadastro de Donos</title>
+ <link rel="stylesheet" href="estilo.css">
 </head>
-<body style="background-color: #ffffff; padding: 20px;">
- <h2 align="left">Cadastre-se</h2>
+<body>
+ <h2 ">Cadastre-se</h2>
  <left>
- <form action="salvar_cliente.php" method="post" style="width: 80%; border: 1px solid #ccc; padding: 15px;">
- <p align="left">
+ <form action="salvar_cliente.php" method="post">
+ <p ">
  <label for="nome_cli">Nome Completo:</label><br>,
  <input type="text" id="nome_cli" name="nome_cliente" size="50" maxlength="100">
  </p>
- <p align="left">
+ <p ">
  <label for="telefone_cli">Telefone:</label><br>
  <input type="telefone" id="telefone_cli" name="telefone_cliente" size="50" required>
  </p>
- <p align="left">
+ <p>
  <label for="email_cli">E-mail:</label><br>
  <input type="email" id="email_cli" name="email_cliente" size="50" required>
  </p>
- <p align="left">
+ <p >
  <label for="senha_cli">Senha:</label><br>
  <input type="password" id="senha_cli" name="senha_cliente" size="20" required>
  </p>
- <p align="left" style="border: 1px dashed #999; padding: 10px;">
+ <p>
  <label>Gênero:</label><br>
  <input type="radio" id="genero_m" name="genero" value="masculino">
  <label for="genero_m">Masculino</label><br>
@@ -33,23 +34,22 @@
  <input type="radio" id="genero_o" name="genero" value="outro">
  <label for="genero_o">Outro</label>
  </p>
- <p align="left" style="margin-top: 15px;">
+ <p >
  <input type="checkbox" id="aceite" name="aceite_termos" value="sim" required>
  <label for="aceite">Eu aceito os Termos de Serviço.</label>
  </p>
- <p align="left">
+ <p>
  <label for="obs_dono">Observações:</label><br>
  <textarea id="obs_dono" name="obs_donos" rows="3" cols="50"></textarea>
  </p>
- <p align="center">
- <button type="submit" style="background-color: green; color: white; padding: 8px 15px; border: none;">
+ <p>
+ <button type="submit">
  Cadastrar Dono
  </button>
- <button type="reset" style="background-color: #dc3545; color: white; padding: 8px 15px; border: none;">
+ <button type="reset">
  Limpar Campos
  </button>
  </p>
  </form>
- </center>
 </body>
 </html>

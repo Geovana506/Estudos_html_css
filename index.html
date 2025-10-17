@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Elementos HTML na Prática</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <table widh="100%" cellpadding="10%" cellspacing="0" border ="1" bgcolor ="#c0c0c0">
+    <table>
         <tr>
-
-            <th colspan="2" align="center">
-                <iframe name="conteudoTopo" src="topo.html" frameborder="0" width="100%" height="90px">
+            <td colspan="2">
+                <iframe name="conteudoTopo" src="topo.html">
                 </iframe>
-            </th>
-
+            </td>
         </tr>
+        
         <tr>
-
-
-            <td width="20%" valign="top">
-                <iframe name="conteudoMenu" src="menu.html" frameborder="0" width="100%" height="400px">
+            <td class="menu-coluna">
+                <iframe name="conteudoMenu" src="menu.html">
                 </iframe>
             </td>
             
-            <td width="80%" valign="top">
-                <iframe name="conteudoGato" src="romeu.html" frameborder="0" width="100%" height="500px">
+            <td class="conteudo-coluna">
+                <iframe name="conteudoGato" src="romeu.html">
                 </iframe>
             </td>
         </tr>
+        
         <tr>
-
-            <th colspan="2" align="center">
-                <iframe name="conteudoRodape" src="rodape.html" frameborder="0" width="100%" height="80px">
+            <td colspan="2">
+                <iframe name="conteudoRodape" src="rodape.html">
                 </iframe>
-            </th>
-
+            </td>
         </tr>
     </table>
-
 </body>
 </html>

@@ -1,0 +1,246 @@
+/* ========================================================================= */
+/* ESTILOS GERAIS - Aplica-se a todos os arquivos (incluindo iframes) */
+/* ========================================================================= */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3 {
+    color: #e67e22;
+    text-align: center;
+    margin-top: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+/* Estilo para as imagens dos gatos: MENORES AINDA E PADRONIZADAS */
+img {
+    max-width: 300px; /* Diminuído de 400px para 300px */
+    width: 100%;
+    height: auto;
+    border: 4px solid #bdc3c7; 
+    border-radius: 8px; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 15px auto;
+}
+
+/* ========================================================================= */
+/* ESTILOS DE TOPO E RODAPÉ (topo.html e rodape.html) */
+/* ========================================================================= */
+
+/* Tonalidade escura e diferente: Azul Petróleo (#2c3e50) */
+body.header-footer {
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Título no topo */
+.header-footer h1 {
+    color: white;
+    font-size: 2.2em;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Texto no rodapé */
+.header-footer p {
+    color: white;
+    margin: 0;
+    font-size: 1em;
+    padding: 0;
+}
+
+/* ========================================================================= */
+/* ESTILOS DO INDEX.HTML (Layout Principal) */
+/* ========================================================================= */
+
+/* Resetando a tabela principal e centralizando */
+table {
+    width: 90% !important;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #bdc3c7;
+    border-collapse: collapse;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Células de cabeçalho e rodapé - Cor Escura */
+/* Aplica-se às células que contêm o iframe do topo/rodapé */
+table tr:first-child td, table tr:last-child td {
+    background-color: #2c3e50;
+    padding: 0;
+}
+
+/* Estilo para as células da tabela */
+table th, table td {
+    padding: 0;
+    border: none;
+}
+
+/* Estilo para os iframes */
+iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    border: none !important;
+    background-color: transparent;
+}
+
+/* Configurações de Largura para Colunas de Menu e Conteúdo */
+.menu-coluna {
+    width: 25%; /* Menu um pouco mais largo */
+}
+
+.conteudo-coluna {
+    width: 75%;
+}
+
+/* Alturas dos iframes */
+iframe[name="conteudoTopo"] {
+    height: 90px !important;
+}
+
+iframe[name="conteudoMenu"] {
+    height: 650px !important; 
+    border-right: 3px solid #34495e !important; /* Divisão forte e escura */
+    background-color: #ecf0f1; 
+}
+
+iframe[name="conteudoGato"] {
+    height: 650px !important;
+}
+
+iframe[name="conteudoRodape"] {
+    height: 50px !important;
+}
+
+/* ========================================================================= */
+/* ESTILOS DE FORMULÁRIO (cadastro_donos.html) - Mantidos do estilo anterior */
+/* ========================================================================= */
+
+/* O body do iframe de cadastro */
+body.cadastro-content {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Container do formulário */
+form {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="telefone"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.radio-group-area {
+    border: 1px dashed #999;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fefefe;
+}
+
+.radio-group-area label {
+    font-weight: normal;
+    display: inline;
+    margin-right: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+
+/* ========================================================================= */
+/* ESTILOS DE RESPONSIVIDADE */
+/* ========================================================================= */
+
+@media (max-width: 768px) {
+    table {
+        width: 100% !important;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    /* Oculta as classes de coluna para forçar a quebra de linha */
+    .menu-coluna, .conteudo-coluna {
+        width: 100% !important;
+        display: block;
+    }
+
+    table tr:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    iframe[name="conteudoMenu"] {
+        height: 150px !important;
+        border-right: none !important;
+        border-bottom: 3px solid #34495e !important;
+    }
+
+    iframe[name="conteudoGato"] {
+        height: 400px !important;
+    }
+    
+    img {
+        max-width: 90%;
+    }
+}
