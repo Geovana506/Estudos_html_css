@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Layout com Iframe</title>
+ <style>
+ /* Estilos idênticos ao exemplo anterior, para manter o layout */
+ body {
+ margin: 0;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ }
+ p {
+ justify-content: center;
+ font-size: 1.2em;
+ font-weight: bold;
+ border: 1px solid #ccc;
+ }
+ .header, .footer {
+ height: 20%;
+ background-color: #f0f0f0;
+ padding: 10px;
+ box-sizing: border-box;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.2em;
+ font-weight: bold;
+ border: 1px solid #ccc;
+ }
+ .main-content {
+ height: 60%;
+ display: flex;
+ flex-direction: row;
+ }
+ /* Coluna A: Menu */
+ .coluna-a {
+ width: 20%;
+ background-color: #e0e0ff;
+ padding: 20px;
+ box-sizing: border-box;
+ border: 1px solid #ccc;
+ }
+ .coluna-a ul {
+ list-style: none;
+ padding: 0;
+ }
+ .coluna-a li {
+ margin-bottom: 10px;
+ }
+ /* Os links agora usam a sintaxe de link (<a>) padrão */
+ .coluna-a a {
+ text-decoration: none;
+ color: #333;
+ font-size: 1.1em;
+ display: block;
+ padding: 5px;
+ background-color: #ccf;
+ border-radius: 3px;
+ transition: background-color 0.2s;
+ }
+ .coluna-a a:hover {
+ background-color: #aae;
+ }
+ /* Coluna B: Container do Iframe */
+ .coluna-b {
+ width: 80%;
+ background-color: #ffe0e0;
+ box-sizing: border-box;
+ border: 1px solid #ccc;
+ /* Remove o padding aqui, o padding será aplicado DENTRO do iframe */
+ }
+
+ /* Iframe */
+ #conteudo-iframe {
+ width: 100%;
+ height: 100%;
+ border: none; /* Remove a borda padrão do iframe */
+ padding: 0;
+ margin: 0;
+ }
+ /* Iframe */
+ #menu-iframe {
+ width: 100%;
+ height: 100%;
+ border: none; /* Remove a borda padrão do iframe */
+ padding: 0;
+ margin: 0;
+ }
+ </style>
+</head>
+<body>
+ <div class="header">
+ Topo (20% de altura)
+ </div>
+ <div class="main-content">
+ <div class="coluna-a">
+ <iframe id="menu-iframe" name="conteudo-menu" src="menu.html">
+ Menu - Seu navegador não suporta iframes.
+ </iframe>
+ </div>
+
+ <div class="coluna-b">
+ <iframe id="conteudo-iframe" name="conteudo-principal" src="home.html">
+ Seu navegador não suporta iframes.
+ </iframe>
+ </div>
+ </div>
+ <div class="footer">
+ Rodapé (20% de altura)
+ </div>
+</body>
+</html>
