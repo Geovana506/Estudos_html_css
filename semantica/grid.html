@@ -1,0 +1,67 @@
+HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <title>Exemplo CSS Grid</title>
+ <style>
+ body { font-family: Arial, sans-serif; padding: 20px; }
+
+ /* O Grid é aplicado no container pai */
+ .grid-container {
+ display: grid;
+ gap: 10px; /* Espaço entre as células (linhas e colunas) */
+ padding: 10px;
+ background-color: #fff3e0;
+ border: 2px solid #ff9800;
+
+ /* PROPRIEDADES CHAVE DO GRID: Define 3 colunas de larguras diferentes */
+ grid-template-columns: 1fr 2fr 1fr;
+ /* 1fr: 1 parte de largura; 2fr: 2 partes de largura */
+ }
+
+ .grid-item {
+ background-color: #ff9800;
+ color: white;
+ padding: 15px;
+ text-align: center;
+ }
+ /* Usando a Semântica do Grid: Posicionamento pela linha 1 e 2 */
+ .item-topo {
+ /* Faz com que o item ocupe todas as 3 colunas */
+ grid-column: 1 / span 3;
+ background-color: #f44336;
+ }
+ </style>
+</head>
+<body>
+ <article>
+ <h2>Especialização CSS: Grid Layout (Bidimensional)</h2>
+ <p>O CSS Grid é ideal para layouts de página, pois permite controlar a
+disposição dos itens em **linhas e colunas simultaneamente**, de forma limpa e
+declarativa.</p>
+
+ <div class="grid-container">
+ <div class="grid-item item-topo">ÁREA DE CABEÇALHO (Ocupa 3 colunas)</div>
+ <div class="grid-item">Coluna A (1/4 da largura)</div>
+ <div class="grid-item">Coluna B (2/4 da largura - Conteúdo Principal)</div>
+ <div class="grid-item">Coluna C (1/4 da largura - Sidebar)</div>
+ </div>
+
+ <section>
+ <h3>Código Aplicado:</h3>
+ <pre>
+.grid-container {
+ display: grid;
+ /* Define 3 colunas, com a do meio sendo o dobro */
+ grid-template-columns: 1fr 2fr 1fr;
+}
+.item-topo {
+ /* Faz o item iniciar na coluna 1 e se estender por 3 colunas */
+ grid-column: 1 / span 3;
+}
+ </pre>
+ </section>
+ </article>
+</body>
+</html> 

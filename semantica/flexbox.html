@@ -1,0 +1,52 @@
+HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <title>Exemplo Flexbox</title>
+ <style>
+ body { font-family: Arial, sans-serif; padding: 20px; }
+
+ /* O Flexbox é aplicado no container pai */
+ .flex-container {
+ display: flex;
+ height: 300px;
+ border: 2px solid #00796b;
+ background-color: #e0f2f1;
+ /* PROPRIEDADES CHAVE DO FLEXBOX PARA CENTRALIZAR */
+ justify-content: center; /* Centraliza horizontalmente (eixo principal) */
+ align-items: center; /* Centraliza verticalmente (eixo transversal) */
+ }
+
+ .flex-item {
+ padding: 20px;
+ background-color: #333;
+ color: white;
+ font-weight: bold;
+ }
+ </style>
+</head>
+<body>
+ <article>
+ <h2>Especialização CSS: Flexbox (Unidimensional)</h2>
+ <p>O Flexbox é ideal para alinhamento em **uma única dimensão** (linha ou
+coluna) e é perfeito para centrar elementos, sem a necessidade de hacks como o
+`transform` ou `float`.</p>
+
+ <div class="flex-container">
+ <div class="flex-item">ESTE ITEM ESTÁ CENTRALIZADO</div>
+ </div>
+
+ <section>
+ <h3>Código Aplicado:</h3>
+ <pre>
+.flex-container {
+ display: flex;
+ justify-content: center; /* HORIZONTAL */
+ align-items: center; /* VERTICAL */
+}
+ </pre>
+ </section>
+ </article>
+</body>
+</html> 

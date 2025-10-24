@@ -1,0 +1,93 @@
+HTML
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <title>Imagens Semânticas (Figure e Figcaption)</title>
+ <style>
+ body { font-family: Arial, sans-serif; padding: 20px; }
+ h2 { border-bottom: 2px solid #5d4037; padding-bottom: 10px; }
+ /* TAG SEMÂNTICA: <section> para agrupar as demonstrações */
+ section {
+ padding: 10px 0;
+ margin-top: 20px;
+ }
+ /* ---------------------------------------------------- */
+ /* LAYOUT PRINCIPAL DAS IMAGENS (USANDO GRID BIDIMENSIONAL) */
+ /* ---------------------------------------------------- */
+ .galeria-grid {
+ display: grid;
+ /* Define 2 colunas de largura igual, com um espaço de 30px */
+ grid-template-columns: 1fr 1fr;
+ gap: 30px;
+ }
+ /* TAG SEMÂNTICA: Estilo para a figure */
+ figure {
+ margin: 0; /* Remove margem padrão do figure */
+ padding: 15px;
+ border: 1px solid #ccc;
+ background-color: #efebe9;
+ /* Aplicando Flexbox dentro de cada FIGURE (Unidimensional) */
+ display: flex;
+ flex-direction: column; /* Conteúdo empilhado (imagem e legenda) */
+ align-items: center; /* Centraliza horizontalmente o conteúdo */
+ }
+ /* TAG SEMÂNTICA: Estilo da legenda */
+ figcaption {
+ font-style: italic;
+ margin-top: 10px;
+ color: #5d4037;
+ text-align: center;
+ }
+
+ /* Estilo básico das imagens (placeholders: dica temporária que desaparece
+assim que o usuário clica ou insere dados no campo) */
+ .placeholder-img {
+ width: 100%;
+ max-width: 300px;
+ height: 200px;
+ background-color: #a1887f;
+ color: white;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: bold;
+ }
+ </style>
+</head>
+<body>
+ <article>
+ <h2>Demonstração Semântica de Mídia com Layout Moderno</h2>
+ <p>A tag <code>&lt;figure&gt;</code> é usada para envolver mídias (como
+imagens, diagramas ou códigos) que são referenciadas no texto, e a tag
+<code>&lt;figcaption&gt;</code> fornece a legenda ou descrição semântica para essa
+mídia.</p>
+
+ <section class="galeria-grid">
+
+ <figure>
+ <div class="placeholder-img">IMAGEM 1: LOGOTIPO</div>
+ <figcaption>Figura 1: Representação de um logotipo moderno, essencial
+para o &lt;header&gt;.</figcaption>
+ </figure>
+
+ <figure>
+ <div class="placeholder-img" style="background-color: #4db6ac; height:
+150px;">
+ CÓDIGO: &lt;nav&gt;
+ </div>
+ <figcaption>Figura 2: Exemplo visual da estrutura de navegação
+semântica em HTML5.</figcaption>
+ </figure>
+ <figure>
+ <div class="placeholder-img" style="background-color: #90a4ae;">
+ DIAGRAMA DE FLUXO
+ </div>
+ <figcaption>Figura 3: Diagrama de fluxo mostrando a importância do
+&lt;main&gt; no SEO.</figcaption>
+ </figure>
+
+ </section>
+ </article>
+</body>
+</html> 
